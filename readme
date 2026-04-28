@@ -1,0 +1,27 @@
+Ethan Ma
+Arrays Assignment
+4/28/26
+
+An array in programing is a set of objects or variables. In C++, declaring an array looks like:
+
+(datatype) myArray[(array length)];
+
+where datatype could be any datatype, and the length would be how many entries the array has.
+When accessing an array, it looks like:
+
+myArray[(index of element)];
+
+Within arrays, the index actually starts at zero. Say we declare an array of 5 integers: {1, 2, 3, 4, 5},
+1 would be at index 0, 2 would be at index 1, 3 would be at index 2, so on and so forth.
+A special kind of array is the multidimensional or 2d array, which is like arrays within an array. They can be visualized as a table of elements. We declare them like:
+
+(datatype) my2DArray[(rows of table)][(columns of table)];
+
+Say we create:
+
+int ints [2][2] = {1 , 2}, {3, 4};
+
+1 would be at ints[0][0];
+2 would be at ints[0][1];
+3 would be at ints[1][0];
+4 would be at ints[1][1];
