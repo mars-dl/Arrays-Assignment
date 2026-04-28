@@ -5,6 +5,7 @@ using namespace std;
 //Ethan Ma
 //Array Assignment, 4/24/26
 
+
 class seat{
     int row{};
     char let{};
@@ -92,6 +93,15 @@ void getRowSeats(int i) {
     seats[3][i].display();
 }
 
+void seatMap() {
+    cout << "\nCurrent Seats:" << endl;
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 6; j++) {
+            seats[i][j].display();
+        }
+    }
+}
+
 int intInput() {
     int input;
     while (!(cin >> input)) {
@@ -125,12 +135,7 @@ int main() {
     }
     while (choice != 7) {
         if (choice == 1) {
-            cout << "\nCurrent Seats:" << endl;
-            for (int i = 0; i < 4; i++) {
-                for (int j = 0; j < 6; j++) {
-                    seats[i][j].display();
-                }
-            }
+            seatMap();
         }
         else if (choice == 2) {
             cout << "\nEnter your name:";
@@ -163,6 +168,7 @@ int main() {
             else {
                 cout << "Sorry, that seat is occupied." << endl;
             }
+            seatMap();
         }
         else if (choice == 3) {
             cout << "\nEnter the number of the seat to cancel (1-6):";
@@ -194,6 +200,7 @@ int main() {
             else {
                 cout << "That seat is currently empty" << endl;
             }
+            seatMap();
         }
         else if (choice == 4) {
             //find seats with letter A or D
@@ -247,6 +254,7 @@ int main() {
                         else {
                             cout << "That seat is currently empty" << endl;
                         }
+                        seatMap();
                     }
                     else if (adchoice == 2) {
                         cout << "\nThe current occupancy is " << calcOccupancy() << "%" << endl;
